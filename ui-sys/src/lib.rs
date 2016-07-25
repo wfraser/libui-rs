@@ -128,6 +128,7 @@ extern {
     pub fn uiEntryReadOnly(e: *mut uiEntry) -> c_int;
     pub fn uiEntrySetReadOnly(e: *mut uiEntry, readonly: c_int);
     pub fn uiNewEntry() -> *mut uiEntry;
+    pub fn uiNewPasswordEntry() -> *mut uiEntry;
 }
 
 pub enum uiCheckbox {}
@@ -741,4 +742,3 @@ extern {
                                   data: *mut c_void);
     pub fn uiNewColorButton() -> *mut uiColorButton;
 }
-

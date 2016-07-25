@@ -376,6 +376,14 @@ impl Entry {
             Entry::from_ui_control(ui_sys::uiNewEntry())
         }
     }
+
+    #[inline]
+    pub fn new_password() -> Entry {
+        ffi_utils::ensure_initialized();
+        unsafe {
+            Entry::from_ui_control(ui_sys::uiNewPasswordEntry())
+        }
+    }
 }
 
 define_control!(Checkbox, uiCheckbox, ui_checkbox);
@@ -1256,4 +1264,3 @@ pub struct Color {
     b: f64,
     a: f64,
 }
-
